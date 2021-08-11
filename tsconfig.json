@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -10,10 +11,13 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "jest",
+      "vuetify"
     ],
     "paths": {
       "@/*": [
@@ -36,5 +40,9 @@
   ],
   "exclude": [
     "node_modules"
+  ],
+  "typeRoots": [
+    "./node_modules/@types",
+    "./node_modules/vuetify/types"
   ]
 }
