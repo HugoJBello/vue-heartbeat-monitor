@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import {getCurrentUserFirebase} from "@/firebase";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
+import Dashboard from "@/views/Dashboard.vue";
 
 Vue.use(VueRouter)
 
@@ -14,9 +15,9 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/',
+    path: '/dashboard',
     name: 'Dashboard',
-    component: Home
+    component: Dashboard
   },
   {
     path: '/register',

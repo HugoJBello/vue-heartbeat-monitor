@@ -45,8 +45,10 @@ export const getActivitiesInDevice = async (limit: number, deviceId: string, dat
     return quizzes
 }
 
+
+
 export const getActivitiesInMonitor = async (limit: number, monitorId: string, date: Date): Promise<Activity[]> => {
-    const result = await activityCollection.limit(limit).where("monitorId", "==", monitorId).where("date", ">=", date).get()
+    const result = await activityCollection.limit(limit).where("monitorId", "==", monitorId).where("date", ">", date).get()
     const quizzes = []
 
     for (const doc of result.docs) {

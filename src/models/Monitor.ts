@@ -1,5 +1,6 @@
 export interface Monitor {
     id: string
+    deviceId: string
     monitorName: string
     monitorDescription: string
     created: Date
